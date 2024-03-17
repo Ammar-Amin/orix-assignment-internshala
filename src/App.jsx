@@ -1,10 +1,10 @@
 import './App.css'
-import Error from './components/Error'
+import Index from './components/Index'
 
 function App() {
 
   return (
-    <Error />
+    <Index />
   )
 }
 
