@@ -3,7 +3,6 @@ import React from 'react'
 export default function Services() {
     return (
         <div className="menu-layer">
-            <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet" />
             {/* loader start*/}
             <div className="page-loader">
                 <div className="spinner">

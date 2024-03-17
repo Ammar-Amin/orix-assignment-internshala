@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+// import { Link } from 'react-router-dom';
 
-export default function Index() {
+export default function Index1() {
+
+    let [resData, setResData] = useState(null);
+
+    useEffect(() => {
+        return async () => {
+
+            try {
+                let res = await fetch("https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae")
+                let data = await res.json();
+                setResData(data.user);
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    }, [])
+
+    console.log(resData);
+
     return (
 
         <div className="menu-layer">

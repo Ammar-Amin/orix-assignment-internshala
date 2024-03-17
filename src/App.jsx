@@ -1,10 +1,12 @@
 import './App.css'
-import Index from './components/Index'
+import Index1 from './components/Index1'
+import Index2 from './components/Index2'
+import Services from './components/Services'
 
 function App() {
 
   return (
-    <Index />
+    <Index1 />
   )
 }
 
