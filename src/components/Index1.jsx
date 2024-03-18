@@ -1,38 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 // import { Link } from 'react-router-dom';
 
-export default function Index1() {
+export default function Index1({ data }) {
 
-    let [resData, setResData] = useState(null);
-
-    useEffect(() => {
-        return async () => {
-
-            try {
-                let res = await fetch("https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae")
-                let data = await res.json();
-                setResData(data.user);
-
-            } catch (error) {
-                console.error(error);
-            }
-        }
-    }, [])
-
-    console.log(resData);
+    if (!data) return <h1>Fetching the Data Please Wait...</h1>
 
     return (
 
         <div className="menu-layer">
             {/* loader start*/}
-            <div className="page-loader">
-                <div className="spinner">
-                    <p>loading...</p>
-                    <div className="spinner-area spinner-first" />
-                    <div className="spinner-area spinner-second" />
-                    <div className="spinner-area spinner-third" />
+            {!data ?
+                <div className="page-loader">
+                    <div className="spinner">
+                        <p>loading...</p>
+                        <div className="spinner-area spinner-first" />
+                        <div className="spinner-area spinner-second" />
+                        <div className="spinner-area spinner-third" />
+                    </div>
                 </div>
-            </div>
+                : ''
+            }
             {/* loader end*/}
             <header className="two three" id="stickyHeader">
                 <div className="container">
@@ -196,16 +183,22 @@ export default function Index1() {
                         <div className="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
                             <div className="user-data">
                                 <h2>Hello I Am</h2>
-                                <h1>Willimes Parker</h1>
-                                <p>Graphic Designer, HTML Coder, PHP Programmer
-                                    and Project Manager</p>
+                                {
+                                    //<h1>Willimes Parker</h1> 
+                                }
+                                <h1>{data.about.name}</h1>
+                                {
+                                    // <p>Graphic Designer, HTML Coder, PHP Programmer
+                                    //     and Project Manager</p>
+                                }
+                                <p>{data.about.title}</p>
                                 <a href="javascript:void(0)" className="lightbox-toggle magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
                                 <span>Available for Freelance</span>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay={300} data-aos-duration={500}>
                             <div className="hero-section-img">
-                                <img alt="hero-girl-img" src="https://via.placeholder.com/630x630" />
+                                <img alt="hero-girl-img" src={data.about.avatar.url} style={{ height: 600, width: 600, objectFit: 'cover' }} />
                                 <div className="happy-satisfied">
                                     <h2>10K</h2>
                                     <p>Happy Satisfied
@@ -222,7 +215,11 @@ export default function Index1() {
                         <div className="col-lg-6 col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
                             <div className="about-mee">
                                 <h2>About Me</h2>
-                                <p>I like creating a cool design project.</p>
+                                <p> {
+                                    // I like creating a cool design project.
+                                }
+                                </p>
+                                <p>{data.about.subTitle}</p>
                                 <ul className="social-media-icon"><li><a href="pdf/orix.pdf" className="magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s"><i className="fa-solid fa-download" target="_blank" />Download CV</a></li>
                                     <li><a className="f magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-facebook-f" /></a></li>
                                     <li><a className="in magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-instagram" /></a></li>
@@ -231,19 +228,16 @@ export default function Index1() {
                                 <ul className="age">
                                     <li><h6>Age:<span>29</span></h6></li>
                                     <li><h6>Residence:<span>USA</span></h6></li>
-                                    <li><h6>Address:<span>88 Some Street, Some Town</span></h6></li>
-                                    <li><h6>E-mail:<span>email@example.com</span></h6></li>
-                                    <li><h6>Phone:<span>+0123 123 456 789</span></h6></li>
+                                    <li><h6>Address:<span>{data.about.address}</span></h6></li>
+                                    <li><h6>E-mail:<span>{data.email}</span></h6></li>
+                                    <li><h6>Phone:<span>{data.about.phoneNumber}</span></h6></li>
                                     <li><h6>Freelance:<span>Available</span></h6></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay={300} data-aos-duration={400}>
                             <div className="progress-data">
-                                <p>Vestibulum vitae lorim tellus nec dui dictum lorim viverra
-                                    ac, place uilm rat Lorse viverra a eros ac, pl
-                                    rat Lorse ipsom lorimes aul erdum. erdum.  Vestibulum vi
-                                    rat Lorse ipsom lorimes aul erdum. erdum. </p>
+                                <p>{data.about.description} </p>
                                 <img alt="sine" src="img/sine.png" />
                                 <div className="progress-bara-data">
                                     <div className="row">
