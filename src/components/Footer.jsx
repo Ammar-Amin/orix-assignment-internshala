@@ -1,12 +1,13 @@
 import React from 'react'
 
 export default function Footer({ data }) {
+    console.log(data.about)
     return (
         <footer className="gap" style={{ backgroundImage: 'url(./img/footer.png)' }}>
             <div className="container">
                 <div className="footer-data">
                     <img alt="log" src="img/orix-logo.png" />
-                    <p>{data.about.subTitle}</p>
+                    <p>{data}</p>
                     <ul className="social-media-footer">
                         <li><a className="magic-hover magic-hover__square" href={data.social_handles[3].url}><i className="fa-brands fa-facebook-f fb" />Facebook</a></li>
                         <li><a className="magic-hover magic-hover__square" href={data.social_handles[2].url}><i className="fa-brands fa-twitter tw" />Twitter</a></li>
