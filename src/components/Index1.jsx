@@ -1,183 +1,692 @@
 import React from 'react'
-import Error from './Error';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Index1({ data }) {
 
-    if (!data) return <Error />
+    if (!data) {
+        return <div className="page-loader" >
+            <div className="spinner">
+                <p>loading...</p>
+                <div className="spinner-area spinner-first" />
+                <div className="spinner-area spinner-second" />
+                <div className="spinner-area spinner-third" />
+            </div>
+        </div>
+    }
+    console.log(data.about.name)
     return (
 
         <div className="menu-layer">
             {/* loader start*/}
-            {
-                !data ?
-                    <div className="page-loader">
-                        <div className="spinner">
-                            <p>loading...</p>
-                            <div className="spinner-area spinner-first" />
-                            <div className="spinner-area spinner-second" />
-                            <div className="spinner-area spinner-third" />
-                        </div>
-                    </div>
-                    : ''
-            }
+
             {/* loader end*/}
-            <header className="two three" id="stickyHeader">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-xl-2">
-                            <div className="logo-icon">
-                                <a className="magic-hover magic-hover__square" href="index.html">
-                                    <img className="light" src="img/orix-logo.png" alt="logo" />
-                                    <img className="drak" src="img/black-logo.png" alt="logo" />
-                                </a>
-                                <a href="javascript:void(0)" className="bar-menu magic-hover magic-hover__square"><i className="fa-solid fa-bars" /></a>
-                            </div>
-                        </div>
-                        <div className="col-xl-7">
-                            <div className="menu-bar">
-                                <nav>
-                                    <ul>
-                                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Home</a>
-                                            <ul>
-                                                <li><a className="magic-hover magic-hover__square" href="index.html">Home 1</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="index-2.html">Home 2 </a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="index-3.html">Home 3 </a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="index-4.html">Home 4 ( Light )</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="index-4-dark.html">Home 4 ( Dark )</a></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Services</a>
-                                            <ul>
-                                                <li><a className="magic-hover magic-hover__square" href="services.html">Services</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="services-details.html">Services Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Portfolio</a>
-                                            <ul>
-                                                <li><a className="magic-hover magic-hover__square" href="portfolio-details-1.html">Portfolio 1</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="portfolio-details-2.html">Portfolio 2</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="portfolio-details-3.html">Portfolio 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Blog</a>
-                                            <ul>
-                                                <li><a className="magic-hover magic-hover__square" href="our-blog.html">Our Blog</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="blog-details-1.html">Blog Details 1</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="blog-details-2.html">Blog Details 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Pages</a>
-                                            <ul>
-                                                <li><a className="magic-hover magic-hover__square" href="about.html">About</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="pricing-plans.html">Pricing Plans</a></li>
-                                                <li><a className="magic-hover magic-hover__square" href="404.html">404</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a className="magic-hover magic-hover__square" href="contact.html">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div className="col-xl-3">
-                            <div className="extras">
-                                <a href="javascript:void(0)" id="desktop-menu" className="magic-hover magic-hover__square menu-btn">
-                                    <i className="fa-solid fa-bars" />
-                                </a>
-                                <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
-                            </div>
-                        </div>
-                        <div className="menu-wrap">
-                            <div className="menu-inner ps ps--active-x ps--active-y">
-                                <span className="menu-cls-btn"><i className="cls-leftright" /><i className="cls-rightleft" /></span>
-                                <div className="contact-info">
-                                    <a className="magic-hover magic-hover__square" href="index.html">
-                                        <img src="img/black-logo.png" alt="logo" />
-                                    </a>
-                                    <h5>I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction.</h5>
-                                    <ul className="recent-news gallery-photos">
-                                        <li>
-                                            <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
-                                        </li>
-                                        <li>
-                                            <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
-                                        </li>
-                                        <li>
-                                            <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
-                                        </li>
-                                        <li>
-                                            <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
-                                        </li>
-                                        <li>
-                                            <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
-                                        </li>
-                                        <li>
-                                            <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
-                                        </li>
-                                    </ul>
-                                    <div className="e-mail">
-                                        <div className="icon-box"><i className="fa-solid fa-envelope" /></div>
-                                        <div><h6>Phone No</h6>
-                                            <a className="magic-hover magic-hover__square" href="mailto:username@domain.com">username@domain.com</a>
-                                        </div>
-                                    </div>
-                                    <div className="e-mail">
-                                        <div className="icon-box"><i className="fa-solid fa-phone" /></div>
-                                        <div><h6>Email Address</h6>
-                                            <a className="magic-hover magic-hover__square" href="callto:+(123)4567890">+(123) 456 7890</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="mobile-nav" id="mobile-nav" style={{ display: 'block' }}>
-                    <div className="mobile-nav-img-data">
-                        <a className="magic-hover magic-hover__square" href="index.html">
-                            <img alt="logo" src="img/black-logo.png" />
-                        </a>
-                    </div>
-                    <ul>
-                        <li className="menu-item-has-children">
-                            <a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-home" /> Home</a>
-                            <ul className="sub-menu">
-                                <li><a className="magic-hover magic-hover__square" href="index.html">Home 1</a>
-                                </li><li><a className="magic-hover magic-hover__square" href="index-2.html">Home 2</a></li>
-                                <li><a className="magic-hover magic-hover__square" href="index-3.html">Home 3</a></li>
-                                <li><a className="magic-hover magic-hover__square" href="index-4.html">Home 4 ( Light )</a></li>
-                                <li><a className="magic-hover magic-hover__square" href="index-4-dark.html">Home 4 ( Dark )</a></li>
-                            </ul>
-                        </li>
-                        <li><a className="magic-hover magic-hover__square" href="about.html"><i className="icon-user" /> About</a></li>
-                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-briefcase" /> Portfolio</a>
-                            <ul className="sub-menu">
-                                <li><a className="magic-hover magic-hover__square" href="portfolio-details-1.html">Portfolio Details 1</a>
-                                </li><li><a className="magic-hover magic-hover__square" href="portfolio-details-2.html">Portfolio Details 2</a></li>
-                                <li><a className="magic-hover magic-hover__square" href="portfolio-details-3.html">Portfolio Details 3</a></li>
-                            </ul>
-                        </li>
-                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-layers" />Blog</a>
-                            <ul className="sub-menu">
-                                <li><a className="magic-hover magic-hover__square" href="our-blog.html">Our Blog</a>
-                                </li><li><a className="magic-hover magic-hover__square" href="blog-details-1.html">Blog Details 1</a>
-                                </li><li><a className="magic-hover magic-hover__square" href="blog-details-2.html">Blog Details 2</a></li>
-                            </ul>
-                        </li>
-                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-folder" /> Pages</a>
-                            <ul className="sub-menu">
-                                <li><a className="magic-hover magic-hover__square" href="services.html">Services</a>
-                                </li><li><a className="magic-hover magic-hover__square" href="services-details.html">Services Details</a></li>
-                                <li><a className="magic-hover magic-hover__square" href="pricing-plans.html">Pricing Plans</a>
-                                </li><li><a className="magic-hover magic-hover__square" href="404.html">404</a></li>
-                            </ul>
-                        </li>
-                        <li><a className="magic-hover magic-hover__square" href="contact.html"><i className="icon-envelope-open" /> Contact</a></li>
-                    </ul>
-                    <a className="magic-hover magic-hover__square" href="JavaScript:void(0)" id="res-cross" />
-                    <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
-                </div>
-            </header>
+
+            {
+                // <header className="two three" id="stickyHeader">
+                //     <div className="container">
+                //         <div className="row align-items-center">
+                //             <div className="col-xl-2">
+                //                 <div className="logo-icon">
+                //                     <a className="magic-hover magic-hover__square" href="index.html">
+                //                         <img className="light" src="img/orix-logo.png" alt="logo" />
+                //                         <img className="drak" src="img/black-logo.png" alt="logo" />
+                //                     </a>
+                //                     <a href="" className="bar-menu magic-hover magic-hover__square"><i className="fa-solid fa-bars" /></a>
+                //                 </div>
+                //             </div>
+                //             <div className="col-xl-7">
+                //                 <div className="menu-bar">
+                //                     <nav>
+                //                         <ul>
+                //                             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Home</a>
+                //                                 <ul>
+                //                                     <li><a className="magic-hover magic-hover__square" href="index.html">Home 1</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="index-2.html">Home 2 </a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="index-3.html">Home 3 </a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="index-4.html">Home 4 ( Light )</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="index-4-dark.html">Home 4 ( Dark )</a></li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Services</a>
+                //                                 <ul>
+                //                                     <li><a className="magic-hover magic-hover__square" href="services.html">Services</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="services-details.html">Services Details</a></li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Portfolio</a>
+                //                                 <ul>
+                //                                     <li><a className="magic-hover magic-hover__square" href="portfolio-details-1.html">Portfolio 1</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="portfolio-details-2.html">Portfolio 2</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="portfolio-details-3.html">Portfolio 3</a></li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Blog</a>
+                //                                 <ul>
+                //                                     <li><a className="magic-hover magic-hover__square" href="our-blog.html">Our Blog</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="blog-details-1.html">Blog Details 1</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="blog-details-2.html">Blog Details 2</a></li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="#">Pages</a>
+                //                                 <ul>
+                //                                     <li><a className="magic-hover magic-hover__square" href="about.html">About</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="pricing-plans.html">Pricing Plans</a></li>
+                //                                     <li><a className="magic-hover magic-hover__square" href="404.html">404</a></li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li><a className="magic-hover magic-hover__square" href="contact.html">Contact</a></li>
+                //                         </ul>
+                //                     </nav>
+                //                 </div>
+                //             </div>
+                //             <div className="col-xl-3">
+                //                 <div className="extras">
+                //                     <a href="" id="desktop-menu" className="magic-hover magic-hover__square menu-btn">
+                //                         <i className="fa-solid fa-bars" />
+                //                     </a>
+                //                     <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
+                //                 </div>
+                //             </div>
+                //             <div className="menu-wrap">
+                //                 <div className="menu-inner ps ps--active-x ps--active-y">
+                //                     <span className="menu-cls-btn"><i className="cls-leftright" /><i className="cls-rightleft" /></span>
+                //                     <div className="contact-info">
+                //                         <a className="magic-hover magic-hover__square" href="index.html">
+                //                             <img src="img/black-logo.png" alt="logo" />
+                //                         </a>
+                //                         <h5>I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction.</h5>
+                //                         <ul className="recent-news gallery-photos">
+                //                             <li>
+                //                                 <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
+                //                             </li>
+                //                             <li>
+                //                                 <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
+                //                             </li>
+                //                             <li>
+                //                                 <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
+                //                             </li>
+                //                             <li>
+                //                                 <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
+                //                             </li>
+                //                             <li>
+                //                                 <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
+                //                             </li>
+                //                             <li>
+                //                                 <a className="magic-hover magic-hover__square" href="https://via.placeholder.com/97x97" data-fancybox="gallery"><img alt="girl" src="https://via.placeholder.com/97x97" /></a>
+                //                             </li>
+                //                         </ul>
+                //                         <div className="e-mail">
+                //                             <div className="icon-box"><i className="fa-solid fa-envelope" /></div>
+                //                             <div><h6>Phone No</h6>
+                //                                 <a className="magic-hover magic-hover__square" href="mailto:username@domain.com">username@domain.com</a>
+                //                             </div>
+                //                         </div>
+                //                         <div className="e-mail">
+                //                             <div className="icon-box"><i className="fa-solid fa-phone" /></div>
+                //                             <div><h6>Email Address</h6>
+                //                                 <a className="magic-hover magic-hover__square" href="callto:+(123)4567890">+(123) 456 7890</a>
+                //                             </div>
+                //                         </div>
+                //                     </div>
+                //                 </div>
+                //             </div>
+                //         </div>
+                //     </div>
+                //     <div className="mobile-nav" id="mobile-nav" style={{ display: 'block' }}>
+                //         <div className="mobile-nav-img-data">
+                //             <a className="magic-hover magic-hover__square" href="index.html">
+                //                 <img alt="logo" src="img/black-logo.png" />
+                //             </a>
+                //         </div>
+                //         <ul>
+                //             <li className="menu-item-has-children">
+                //                 <a className="magic-hover magic-hover__square" href=""><i className="icon-home" /> Home</a>
+                //                 <ul className="sub-menu">
+                //                     <li><a className="magic-hover magic-hover__square" href="index.html">Home 1</a>
+                //                     </li><li><a className="magic-hover magic-hover__square" href="index-2.html">Home 2</a></li>
+                //                     <li><a className="magic-hover magic-hover__square" href="index-3.html">Home 3</a></li>
+                //                     <li><a className="magic-hover magic-hover__square" href="index-4.html">Home 4 ( Light )</a></li>
+                //                     <li><a className="magic-hover magic-hover__square" href="index-4-dark.html">Home 4 ( Dark )</a></li>
+                //                 </ul>
+                //             </li>
+                //             <li><a className="magic-hover magic-hover__square" href="about.html"><i className="icon-user" /> About</a></li>
+                //             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href=""><i className="icon-briefcase" /> Portfolio</a>
+                //                 <ul className="sub-menu">
+                //                     <li><a className="magic-hover magic-hover__square" href="portfolio-details-1.html">Portfolio Details 1</a>
+                //                     </li><li><a className="magic-hover magic-hover__square" href="portfolio-details-2.html">Portfolio Details 2</a></li>
+                //                     <li><a className="magic-hover magic-hover__square" href="portfolio-details-3.html">Portfolio Details 3</a></li>
+                //                 </ul>
+                //             </li>
+                //             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href=""><i className="icon-layers" />Blog</a>
+                //                 <ul className="sub-menu">
+                //                     <li><a className="magic-hover magic-hover__square" href="our-blog.html">Our Blog</a>
+                //                     </li><li><a className="magic-hover magic-hover__square" href="blog-details-1.html">Blog Details 1</a>
+                //                     </li><li><a className="magic-hover magic-hover__square" href="blog-details-2.html">Blog Details 2</a></li>
+                //                 </ul>
+                //             </li>
+                //             <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href=""><i className="icon-folder" /> Pages</a>
+                //                 <ul className="sub-menu">
+                //                     <li><a className="magic-hover magic-hover__square" href="services.html">Services</a>
+                //                     </li><li><a className="magic-hover magic-hover__square" href="services-details.html">Services Details</a></li>
+                //                     <li><a className="magic-hover magic-hover__square" href="pricing-plans.html">Pricing Plans</a>
+                //                     </li><li><a className="magic-hover magic-hover__square" href="404.html">404</a></li>
+                //                 </ul>
+                //             </li>
+                //             <li><a className="magic-hover magic-hover__square" href="contact.html"><i className="icon-envelope-open" /> Contact</a></li>
+                //         </ul>
+                //         <a className="magic-hover magic-hover__square" href="" id="res-cross" />
+                //         <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
+                //     </div>
+                // </header>
+
+                // <header className="two three" id="stickyHeader">
+                //     <div className="container">
+                //         <div className="row align-items-center">
+                //             <div className="col-xl-2">
+                //                 <div className="logo-icon">
+                //                     <Link className="magic-hover magic-hover__square" to="/">
+                //                         <img className="light" src="img/orix-logo.png" alt="logo" />
+                //                         <img className="drak" src="img/black-logo.png" alt="logo" />
+                //                     </Link>
+                //                     <Link
+                //                         to=""
+                //                         className="bar-menu magic-hover magic-hover__square"
+                //                     >
+                //                         <i className="fa-solid fa-bars" />
+                //                     </Link>
+                //                 </div>
+                //             </div>
+                //             <div className="col-xl-7">
+                //                 <div className="menu-bar">
+                //                     <nav>
+                //                         <ul>
+                //                             <li className="menu-item-has-children">
+                //                                 <a className="magic-hover magic-hover__square" href="#">
+                //                                     Home
+                //                                 </a>
+                //                                 <ul>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="index"
+                //                                         >
+                //                                             Home 1
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="index-2"
+                //                                         >
+                //                                             Home 2{" "}
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="index-3"
+                //                                         >
+                //                                             Home 3{" "}
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="index-4"
+                //                                         >
+                //                                             Home 4 ( Light )
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="index-4-dark"
+                //                                         >
+                //                                             Home 4 ( Dark )
+                //                                         </Link>
+                //                                     </li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children">
+                //                                 <a className="magic-hover magic-hover__square" href="#">
+                //                                     Services
+                //                                 </a>
+                //                                 <ul>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             href="services.html"
+                //                                         >
+                //                                             Services
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             href="services-details.html"
+                //                                         >
+                //                                             Services Details
+                //                                         </Link>
+                //                                     </li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children">
+                //                                 <a className="magic-hover magic-hover__square" href="#">
+                //                                     Portfolio
+                //                                 </a>
+                //                                 <ul>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="portfolio-details-1"
+                //                                         >
+                //                                             Portfolio 1
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="portfolio-details-2"
+                //                                         >
+                //                                             Portfolio 2
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="portfolio-details-3"
+                //                                         >
+                //                                             Portfolio 3
+                //                                         </Link>
+                //                                     </li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children">
+                //                                 <a className="magic-hover magic-hover__square" href="#">
+                //                                     Blog
+                //                                 </a>
+                //                                 <ul>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="our-blog"
+                //                                         >
+                //                                             Our Blog
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="blog-details-1"
+                //                                         >
+                //                                             Blog Details 1
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="blog-details-2"
+                //                                         >
+                //                                             Blog Details 2
+                //                                         </Link>
+                //                                     </li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li className="menu-item-has-children">
+                //                                 <a className="magic-hover magic-hover__square" href="#">
+                //                                     Pages
+                //                                 </a>
+                //                                 <ul>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="about"
+                //                                         >
+                //                                             About
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="pricing-plans"
+                //                                         >
+                //                                             Pricing Plans
+                //                                         </Link>
+                //                                     </li>
+                //                                     <li>
+                //                                         <Link
+                //                                             className="magic-hover magic-hover__square"
+                //                                             to="error"
+                //                                         >
+                //                                             404
+                //                                         </Link>
+                //                                     </li>
+                //                                 </ul>
+                //                             </li>
+                //                             <li>
+                //                                 <Link
+                //                                     className="magic-hover magic-hover__square"
+                //                                     to="contact"
+                //                                 >
+                //                                     Contact
+                //                                 </Link>
+                //                             </li>
+                //                         </ul>
+                //                     </nav>
+                //                 </div>
+                //             </div>
+                //             <div className="col-xl-3">
+                //                 <div className="extras">
+                //                     <a
+                //                         href=""
+                //                         id="desktop-menu"
+                //                         className="magic-hover magic-hover__square menu-btn"
+                //                     >
+                //                         <i className="fa-solid fa-bars" />
+                //                     </a>
+                //                     <Link
+                //                         to="./pdf/orix.pdf"
+                //                         className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s"
+                //                         target="_blank"
+                //                     >
+                //                         <i className="fa-solid fa-download" />
+                //                         Download CV
+                //                     </Link>
+                //                 </div>
+                //             </div>
+                //             <div className="menu-wrap">
+                //                 <div className="menu-inner ps ps--active-x ps--active-y">
+                //                     <span className="menu-cls-btn">
+                //                         <i className="cls-leftright" />
+                //                         <i className="cls-rightleft" />
+                //                     </span>
+                //                     <div className="contact-info">
+                //                         <a className="magic-hover magic-hover__square" href="index.html">
+                //                             <img src="img/black-logo.png" alt="logo" />
+                //                         </a>
+                //                         <h5>
+                //                             I use animation as a third dimension by which to simplify
+                //                             experiences and kuiding thro each and every interaction.
+                //                         </h5>
+                //                         <ul className="recent-news gallery-photos">
+                //                             <li>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="https://via.placeholder.com/97x97"
+                //                                     data-fancybox="gallery"
+                //                                 >
+                //                                     <img alt="girl" src="https://via.placeholder.com/97x97" />
+                //                                 </a>
+                //                             </li>
+                //                             <li>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="https://via.placeholder.com/97x97"
+                //                                     data-fancybox="gallery"
+                //                                 >
+                //                                     <img alt="girl" src="https://via.placeholder.com/97x97" />
+                //                                 </a>
+                //                             </li>
+                //                             <li>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="https://via.placeholder.com/97x97"
+                //                                     data-fancybox="gallery"
+                //                                 >
+                //                                     <img alt="girl" src="https://via.placeholder.com/97x97" />
+                //                                 </a>
+                //                             </li>
+                //                             <li>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="https://via.placeholder.com/97x97"
+                //                                     data-fancybox="gallery"
+                //                                 >
+                //                                     <img alt="girl" src="https://via.placeholder.com/97x97" />
+                //                                 </a>
+                //                             </li>
+                //                             <li>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="https://via.placeholder.com/97x97"
+                //                                     data-fancybox="gallery"
+                //                                 >
+                //                                     <img alt="girl" src="https://via.placeholder.com/97x97" />
+                //                                 </a>
+                //                             </li>
+                //                             <li>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="https://via.placeholder.com/97x97"
+                //                                     data-fancybox="gallery"
+                //                                 >
+                //                                     <img alt="girl" src="https://via.placeholder.com/97x97" />
+                //                                 </a>
+                //                             </li>
+                //                         </ul>
+                //                         <div className="e-mail">
+                //                             <div className="icon-box">
+                //                                 <i className="fa-solid fa-envelope" />
+                //                             </div>
+                //                             <div>
+                //                                 <h6>Phone No</h6>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="mailto:username@domain.com"
+                //                                 >
+                //                                     username@domain.com
+                //                                 </a>
+                //                             </div>
+                //                         </div>
+                //                         <div className="e-mail">
+                //                             <div className="icon-box">
+                //                                 <i className="fa-solid fa-phone" />
+                //                             </div>
+                //                             <div>
+                //                                 <h6>Email Address</h6>
+                //                                 <a
+                //                                     className="magic-hover magic-hover__square"
+                //                                     href="callto:+(123)4567890"
+                //                                 >
+                //                                     +(123) 456 7890
+                //                                 </a>
+                //                             </div>
+                //                         </div>
+                //                     </div>
+                //                 </div>
+                //             </div>
+                //         </div>
+                //     </div>
+                //     <div className="mobile-nav" id="mobile-nav" style={{ display: "block" }}>
+                //         <div className="mobile-nav-img-data">
+                //             <a className="magic-hover magic-hover__square" href="index.html">
+                //                 <img alt="logo" src="img/black-logo.png" />
+                //             </a>
+                //         </div>
+                //         <ul>
+                //             <li className="menu-item-has-children">
+                //                 <a
+                //                     className="magic-hover magic-hover__square"
+                //                     href=""
+                //                 >
+                //                     <i className="icon-home" /> Home
+                //                 </a>
+                //                 <ul className="sub-menu">
+                //                     <li>
+                //                         <Link className="magic-hover magic-hover__square" to="/">
+                //                             Home 1
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="index-2"
+                //                         >
+                //                             Home 2
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="index-3"
+                //                         >
+                //                             Home 3
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="index-4"
+                //                         >
+                //                             Home 4 ( Light )
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="index-4-dark"
+                //                         >
+                //                             Home 4 ( Dark )
+                //                         </Link>
+                //                     </li>
+                //                 </ul>
+                //             </li>
+                //             <li>
+                //                 <Link className="magic-hover magic-hover__square" to="about">
+                //                     <i className="icon-user" /> About
+                //                 </Link>
+                //             </li>
+                //             <li className="menu-item-has-children">
+                //                 <a
+                //                     className="magic-hover magic-hover__square"
+                //                     href=""
+                //                 >
+                //                     <i className="icon-briefcase" /> Portfolio
+                //                 </a>
+                //                 <ul className="sub-menu">
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="portfolio-details-1"
+                //                         >
+                //                             Portfolio Details 1
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="portfolio-details-2"
+                //                         >
+                //                             Portfolio Details 2
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="portfolio-details-3"
+                //                         >
+                //                             Portfolio Details 3
+                //                         </Link>
+                //                     </li>
+                //                 </ul>
+                //             </li>
+                //             <li className="menu-item-has-children">
+                //                 <a
+                //                     className="magic-hover magic-hover__square"
+                //                     href=""
+                //                 >
+                //                     <i className="icon-layers" />
+                //                     Blog
+                //                 </a>
+                //                 <ul className="sub-menu">
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="our-blog"
+                //                         >
+                //                             Our Blog
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="our-blog"
+                //                         >
+                //                             Blog Details 1
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="our-blog"
+                //                         >
+                //                             Blog Details 2
+                //                         </Link>
+                //                     </li>
+                //                 </ul>
+                //             </li>
+                //             <li className="menu-item-has-children">
+                //                 <a
+                //                     className="magic-hover magic-hover__square"
+                //                     href=""
+                //                 >
+                //                     <i className="icon-folder" /> Pages
+                //                 </a>
+                //                 <ul className="sub-menu">
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="services"
+                //                         >
+                //                             Services
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="services-details"
+                //                         >
+                //                             Services Details
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link
+                //                             className="magic-hover magic-hover__square"
+                //                             to="pricing-plans"
+                //                         >
+                //                             Pricing Plans
+                //                         </Link>
+                //                     </li>
+                //                     <li>
+                //                         <Link className="magic-hover magic-hover__square" to="error">
+                //                             404
+                //                         </Link>
+                //                     </li>
+                //                 </ul>
+                //             </li>
+                //             <li>
+                //                 <Link className="magic-hover magic-hover__square" to="contact">
+                //                     <i className="icon-envelope-open" /> Contact
+                //                 </Link>
+                //             </li>
+                //         </ul>
+                //         <a
+                //             className="magic-hover magic-hover__square"
+                //             href=""
+                //             id="res-cross"
+                //         />
+                //         <Link
+                //             to="pdf/orix.pdf"
+                //             className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s"
+                //             target="_blank"
+                //         >
+                //             <i className="fa-solid fa-download" />
+                //             Download CV
+                //         </Link>
+                //     </div>
+                // </header>
+            }
+
             <section className="hero-section">
                 <div className="container">
                     <div className="row align-items-center">
@@ -193,7 +702,7 @@ export default function Index1({ data }) {
                                     //     and Project Manager</p>
                                 }
                                 <p>{data.about.title}</p>
-                                <a href="javascript:void(0)" className="lightbox-toggle magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
+                                <a href="" className="lightbox-toggle magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
                                 <span>Available for Freelance</span>
                             </div>
                         </div>
@@ -222,9 +731,9 @@ export default function Index1({ data }) {
                                 </p>
                                 <p>{data.about.subTitle}</p>
                                 <ul className="social-media-icon"><li><a href="pdf/orix.pdf" className="magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s"><i className="fa-solid fa-download" target="_blank" />Download CV</a></li>
-                                    <li><a className="f magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-facebook-f" /></a></li>
-                                    <li><a className="in magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-instagram" /></a></li>
-                                    <li><a className="t magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-twitter" /></a></li>
+                                    <li><a className="f magic-hover magic-hover__square" href=""><i className="fa-brands fa-facebook-f" /></a></li>
+                                    <li><a className="in magic-hover magic-hover__square" href=""><i className="fa-brands fa-instagram" /></a></li>
+                                    <li><a className="t magic-hover magic-hover__square" href=""><i className="fa-brands fa-twitter" /></a></li>
                                 </ul>
                                 <ul className="age">
                                     <li><h6>Age:<span>29</span></h6></li>
@@ -470,32 +979,26 @@ export default function Index1({ data }) {
                                 </div>
                                 <div className="education">
                                     <h5>2012 to 2014</h5>
-                                    <p>Bachelor Degree</p>
+                                    <p>{data.timeline[5].jobTitle}</p>
                                     <div className="studies">
-                                        <h6>University of Studies</h6>
-                                        <p>Lorem ipsum indolor st amet, cmetc
-                                            ur adips locing elit, sedi dinm indolo
-                                            sum indolor st ailmes.</p>
+                                        <h6>{data.timeline[5].company_name}</h6>
+                                        <p>{data.timeline[5].bulletPoints}</p>
                                     </div>
                                 </div>
                                 <div className="education">
                                     <h5>2010 to 2012</h5>
-                                    <p>Master Degree</p>
+                                    <p>{data.timeline[3].jobTitle}</p>
                                     <div className="studies">
-                                        <h6>University of South Education</h6>
-                                        <p>Lorem ipsum indolor st amet, cmetc
-                                            ur adips locing elit, sedi dinm indolo
-                                            sum indolor st ailmes.</p>
+                                        <h6>{data.timeline[3].company_name}</h6>
+                                        <p>{data.timeline[3].summary}</p>
                                     </div>
                                 </div>
                                 <div className="education end">
                                     <h5>2008 to 2010</h5>
-                                    <p>Advanced Post Graduate</p>
+                                    <p>{data.timeline[0].jobTitle}</p>
                                     <div className="studies">
-                                        <h6>University of South Education</h6>
-                                        <p>Lorem ipsum indolor st amet, cmetc
-                                            ur adips locing elit, sedi dinm indolo
-                                            sum indolor st ailmes.</p>
+                                        <h6>{data.timeline[0].company_name}</h6>
+                                        <p>{data.timeline[0].summary}</p>
                                     </div>
                                 </div>
                             </div>
@@ -507,32 +1010,26 @@ export default function Index1({ data }) {
                                 </div>
                                 <div className="education">
                                     <h5>2018 to Present</h5>
-                                    <p>Graphic Designer / Web Designer</p>
+                                    <p>{data.timeline[4].jobTitle}</p>
                                     <div className="studies">
-                                        <h6>Envato Studio</h6>
-                                        <p>Lorem ipsum indolor st amet, cmetc
-                                            ur adips locing elit, sedi dinm indolo
-                                            sum indolor st ailmes.</p>
+                                        <h6>{data.timeline[4].company_name}</h6>
+                                        <p>{data.timeline[4].bulletPoints[1]}</p>
                                     </div>
                                 </div>
                                 <div className="education">
                                     <h5>2016 to 2018</h5>
-                                    <p>Junior Ui/Ux Designer</p>
+                                    <p>{data.timeline[2].jobTitle}</p>
                                     <div className="studies">
-                                        <h6>Envato Studio</h6>
-                                        <p>Lorem ipsum indolor st amet, cmetc
-                                            ur adips locing elit, sedi dinm indolo
-                                            sum indolor st ailmes.</p>
+                                        <h6>{data.timeline[2].company_name}</h6>
+                                        <p>{data.timeline[2].summary}</p>
                                     </div>
                                 </div>
                                 <div className="education end">
                                     <h5>20014 to 2016</h5>
-                                    <p>Senior Ui/Ux Designer</p>
+                                    <p>{data.timeline[1].jobTitle}</p>
                                     <div className="studies">
-                                        <h6>Envato Studio</h6>
-                                        <p>Lorem ipsum indolor st amet, cmetc
-                                            ur adips locing elit, sedi dinm indolo
-                                            sum indolor st ailmes.</p>
+                                        <h6>{data.timeline[1].company_name}</h6>
+                                        <p>{data.timeline[1].summary}</p>
                                     </div>
                                 </div>
                             </div>
@@ -692,8 +1189,7 @@ export default function Index1({ data }) {
                         <div className="col-lg-5">
                             <div className="customers gap">
                                 <h2>1M+ Satisfied Customers</h2>
-                                <p>Vestibulum vitae lorim tellus nec dui dictum lorim
-                                    ac, place uilm rat Lorse ipsom</p>
+                                <p>{data.about.quote}</p>
                             </div>
                         </div>
                         <div className="col-lg-7">
@@ -755,40 +1251,34 @@ export default function Index1({ data }) {
                     <div className="row">
                         <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
                             <div className="blog-data">
-                                <img alt="blog img" src="https://via.placeholder.com/390x269" />
+                                <img alt="blog img" src={data.testimonials[0].image.url}
+                                    style={{ width: '390px', height: '269px', objectFit: 'cover' }} />
                                 <div className="message-icon"><i className="fa-solid fa-message" /><span>12</span></div>
-                                <h6>December 5, 2023  <span>|</span>   John Smith</h6>
-                                <h4><a className="magic-hover magic-hover__square" href="#">Interview Photographer
-                                    Mark Seliger</a></h4>
-                                <p>Duis sed odio sit amet nibh vulputate
-                                    cursus a sit Using an interactive app
-                                    amet nibh roach.</p>
+                                <h6>December 5, 2023  <span>|</span> {data.testimonials[0].name}</h6>
+                                <h4><a className="magic-hover magic-hover__square" href="#">{data.testimonials[0].position}</a></h4>
+                                <p>{data.testimonials[0].review}</p>
                                 <a className="magic-hover magic-hover__square" href="#"><i className="fa-solid fa-angle-right" /></a>
                             </div>
                         </div>
                         <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay={300} data-aos-duration={400}>
                             <div className="blog-data">
-                                <img alt="blog img" src="https://via.placeholder.com/390x269" />
+                                <img alt="blog img" src={data.testimonials[1].image.url}
+                                    style={{ width: '390px', height: '269px', objectFit: 'cover' }} />
                                 <div className="message-icon"><i className="fa-solid fa-message" /><span>22</span></div>
-                                <h6>December 5, 2023  <span>|</span>   John Smith</h6>
-                                <h4><a className="magic-hover magic-hover__square" href="#">Professionals with a
-                                    Global Mindset</a></h4>
-                                <p>Duis sed odio sit amet nibh vulputate
-                                    cursus a sit Using an interactive app
-                                    amet nibh roach.</p>
+                                <h6>December 5, 2023  <span>|</span>   {data.testimonials[1].name}</h6>
+                                <h4><a className="magic-hover magic-hover__square" href="#">{data.testimonials[1].position}</a></h4>
+                                <p>{data.testimonials[1].review}</p>
                                 <a className="magic-hover magic-hover__square" href="#"><i className="fa-solid fa-angle-right" /></a>
                             </div>
                         </div>
                         <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12" data-aos="fade-up" data-aos-delay={400} data-aos-duration={500}>
                             <div className="blog-data">
-                                <img alt="blog img" src="https://via.placeholder.com/390x269" />
+                                <img alt="blog img" src={data.testimonials[4].image.url}
+                                    style={{ width: '390px', height: '269px', objectFit: 'cover' }} />
                                 <div className="message-icon"><i className="fa-solid fa-message" /><span>12</span></div>
-                                <h6>December 5, 2023  <span>|</span>   John Smith</h6>
-                                <h4><a className="magic-hover magic-hover__square" href="#">Reimagine, Restructure
-                                    and Renew Business</a></h4>
-                                <p>Duis sed odio sit amet nibh vulputate
-                                    cursus a sit Using an interactive app
-                                    amet nibh roach.</p>
+                                <h6>December 5, 2023  <span>|</span>   {data.testimonials[2].name}</h6>
+                                <h4><a className="magic-hover magic-hover__square" href="#">{data.testimonials[3].position}</a></h4>
+                                <p>{data.testimonials[2].review}</p>
                                 <a className="magic-hover magic-hover__square" href="#"><i className="fa-solid fa-angle-right" /></a>
                             </div>
                         </div>
@@ -810,19 +1300,19 @@ export default function Index1({ data }) {
                             <div className="e-mail">
                                 <div className="icon-box"><i className="fa-solid fa-envelope" /></div>
                                 <div><h6>Phone No</h6>
-                                    <a className="magic-hover magic-hover__square" href="mailto:username@domain.com">username@domain.com</a>
+                                    <a className="magic-hover magic-hover__square" href="mailto:username@domain.com">{data.email}</a>
                                 </div>
                             </div>
                             <div className="e-mail">
                                 <div className="icon-box"><i className="fa-solid fa-phone" /></div>
                                 <div><h6>Email Address</h6>
-                                    <a className="magic-hover magic-hover__square" href="callto:+(123)4567890">+(123) 456 7890</a>
+                                    <a className="magic-hover magic-hover__square" href="callto:+(123)4567890">{data.about.phoneNumber}</a>
                                 </div>
                             </div>
                             <div className="e-mail">
                                 <div className="icon-box"><i className="fa-solid fa-location-dot" /></div>
                                 <div><h6>Location</h6>
-                                    <a className="magic-hover magic-hover__square" href="javascript:void(0)">Block Street No 2101 USA</a>
+                                    <a className="magic-hover magic-hover__square" href="">{data.about.address}</a>
                                 </div>
                             </div>
                         </div>
@@ -853,22 +1343,24 @@ export default function Index1({ data }) {
                     </div>
                 </div>
             </section>
-            <footer className="gap" style={{ backgroundImage: 'url(./img/footer.png)' }}>
-                <div className="container">
-                    <div className="footer-data">
-                        <img alt="log" src="img/orix-logo.png" />
-                        <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris Morbi accumsan ipsuy
-                            a odio tincdunt ilmauctor Class aptent taciti sociosqu ads Etiam.</p>
-                        <ul className="social-media-footer">
-                            <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-facebook-f fb" />Facebook</a></li>
-                            <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-twitter tw" />Twitter</a></li>
-                            <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-vimeo-v vi" />Vimeo</a></li>
-                            <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-linkedin-in in" />Linked In</a></li>
-                        </ul>
-                        <h6>© 2022 CV Resume<i className="fa-solid fa-heart" />By Winsfolio, All Rights Reserved</h6>
-                    </div>
-                </div>
-            </footer>
+            {
+                // <footer className="gap" style={{ backgroundImage: 'url(./img/footer.png)' }}>
+                //     <div className="container">
+                //         <div className="footer-data">
+                //             <img alt="log" src="img/orix-logo.png" />
+                //             <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris Morbi accumsan ipsuy
+                //                 a odio tincdunt ilmauctor Class aptent taciti sociosqu ads Etiam.</p>
+                //             <ul className="social-media-footer">
+                //                 <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-facebook-f fb" />Facebook</a></li>
+                //                 <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-twitter tw" />Twitter</a></li>
+                //                 <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-vimeo-v vi" />Vimeo</a></li>
+                //                 <li><a className="magic-hover magic-hover__square" href="#"><i className="fa-brands fa-linkedin-in in" />Linked In</a></li>
+                //             </ul>
+                //             <h6>© 2022 CV Resume<i className="fa-solid fa-heart" />By Winsfolio, All Rights Reserved</h6>
+                //         </div>
+                //     </div>
+                // </footer>
+            }
             {/* popup */}
             <div className="backdrop" />
             <div className="box">

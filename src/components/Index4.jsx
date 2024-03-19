@@ -16,7 +16,7 @@ export default function Index4({ data }) {
             {/* loader end*/}
             <div className="tabs js-tabs">
                 <header className="pages-one">
-                    <a href="javascript:void(0)" className="bar-menu"><i className="fa-solid fa-bars" /></a>
+                    <a href="" className="bar-menu"><i className="fa-solid fa-bars" /></a>
                     <div className="header-home-one tabs-nav__list">
                         <div>
                             <img alt="logo" src="img/logo-black.png" />
@@ -35,9 +35,9 @@ export default function Index4({ data }) {
                         <div className="share">
                             <a className="magic-hover magic-hover__square" href="#"><i className="icon-cursor" /></a>
                             <ul className="social-media-icon header"><li>
-                            </li><li><a className="f magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-facebook-f" /></a></li>
-                                <li><a className="in magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-instagram" /></a></li>
-                                <li><a className="t magic-hover magic-hover__square" href="javascript:void(0)"><i className="fa-brands fa-twitter" /></a></li>
+                            </li><li><a className="f magic-hover magic-hover__square" href=""><i className="fa-brands fa-facebook-f" /></a></li>
+                                <li><a className="in magic-hover magic-hover__square" href=""><i className="fa-brands fa-instagram" /></a></li>
+                                <li><a className="t magic-hover magic-hover__square" href=""><i className="fa-brands fa-twitter" /></a></li>
                             </ul>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ export default function Index4({ data }) {
                             <li className="tabs-nav__item js-tabs-item"><a href="#tab-5" className="tabs-nav__link js-tabs-link new-tabe nav-anim magic-hover magic-hover__square"><i className="icon-folder" /><span>News</span></a></li>
                             <li className="tabs-nav__item js-tabs-item"><a href="#tab-6" className="tabs-nav__link js-tabs-link new-tabe nav-anim magic-hover magic-hover__square"><i className="icon-envelope-open" /><span>Contact</span></a></li>
                         </ul>
-                        <a className="magic-hover magic-hover__square" href="JavaScript:void(0)" id="res-cross" />
+                        <a className="magic-hover magic-hover__square" href="" id="res-cross" />
                         <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
                     </div>
                 </header>
@@ -91,7 +91,7 @@ export default function Index4({ data }) {
                                         <h1>Willimes Parker</h1>
                                         <p>Graphic Designer, HTML Coder, PHP Programmer
                                             and Project Manager</p>
-                                        <a href="javascript:void(0)" className="lightbox-toggle button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
+                                        <a href="" className="lightbox-toggle button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
                                         <span>Available for Freelance</span>
                                     </div>
                                 </div>

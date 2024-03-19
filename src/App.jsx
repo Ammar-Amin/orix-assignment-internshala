@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
+import Layout from './components/Layout'
 import About from './components/About'
 import BlogDetails1 from './components/BlogDetails1'
 import BlogDetails2 from './components/BlogDetails2'
@@ -38,6 +39,7 @@ function App() {
 
       } catch (error) {
         console.error(error);
+        return <Error />
       }
     }
   }, [])
@@ -46,12 +48,13 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<Index1 data={resData} />} >
+      <Route path='/' element={<Layout data={resData} />} >
+        <Route path='' element={<Index1 data={resData} />} />
         <Route path='about' element={<About data={resData} />} />
         <Route path='blog-details-1' element={<BlogDetails1 data={resData} />} />
         <Route path='blog-details-2' element={<BlogDetails2 data={resData} />} />
         <Route path='contact' element={<Contact data={resData} />} />
-        <Route path='error' element={<Error data={resData} />} />
+        <Route path='error' element={<Error />} />
         <Route path='index-2' element={<Index2 data={resData} />} />
         <Route path='index-3' element={<Index3 data={resData} />} />
         <Route path='index-4' element={<Index4 data={resData} />} />

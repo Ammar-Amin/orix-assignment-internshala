@@ -23,7 +23,7 @@ export default function Index2({ data }) {
                                     <img className="light" src="img/orix-logo.png" alt="logo" />
                                     <img className="drak" src="img/black-logo.png" alt="logo" />
                                 </a>
-                                <a href="javascript:void(0)" className="bar-menu magic-hover magic-hover__square"><i className="fa-solid fa-bars" /></a>
+                                <a href="" className="bar-menu magic-hover magic-hover__square"><i className="fa-solid fa-bars" /></a>
                             </div>
                         </div>
                         <div className="col-xl-7">
@@ -64,7 +64,7 @@ export default function Index2({ data }) {
                         </div>
                         <div className="col-xl-3">
                             <div className="extras">
-                                <a href="javascript:void(0)" className="bar-menu magic-hover magic-hover__square"><i className="fa-solid fa-bars" /></a>
+                                <a href="" className="bar-menu magic-hover magic-hover__square"><i className="fa-solid fa-bars" /></a>
                                 <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ export default function Index2({ data }) {
                                     <div className="e-mail">
                                         <div className="icon-box"><i className="fa-solid fa-location-dot" /></div>
                                         <div><h6>Location</h6>
-                                            <a className="magic-hover magic-hover__square" href="javascript:void(0)">Block Street No 2101 USA</a>
+                                            <a className="magic-hover magic-hover__square" href="">Block Street No 2101 USA</a>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +107,7 @@ export default function Index2({ data }) {
                     </div>
                     <ul>
                         <li className="menu-item-has-children">
-                            <a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-home" /> Home</a>
+                            <a className="magic-hover magic-hover__square" href=""><i className="icon-home" /> Home</a>
                             <ul className="sub-menu">
                                 <li><a className="magic-hover magic-hover__square" href="index.html">Home 1</a>
                                 </li><li><a className="magic-hover magic-hover__square" href="index-2.html">Home 2</a></li>
@@ -117,21 +117,21 @@ export default function Index2({ data }) {
                             </ul>
                         </li>
                         <li><a className="magic-hover magic-hover__square" href="about.html"><i className="icon-user" /> About</a></li>
-                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-briefcase" /> Portfolio</a>
+                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href=""><i className="icon-briefcase" /> Portfolio</a>
                             <ul className="sub-menu">
                                 <li><a className="magic-hover magic-hover__square" href="portfolio-details-1.html">Portfolio Details 1</a>
                                 </li><li><a className="magic-hover magic-hover__square" href="portfolio-details-2.html">Portfolio Details 2</a></li>
                                 <li><a className="magic-hover magic-hover__square" href="portfolio-details-3.html">Portfolio Details 3</a></li>
                             </ul>
                         </li>
-                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-layers" />Blog</a>
+                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href=""><i className="icon-layers" />Blog</a>
                             <ul className="sub-menu">
                                 <li><a className="magic-hover magic-hover__square" href="our-blog.html">Our Blog</a>
                                 </li><li><a className="magic-hover magic-hover__square" href="blog-details-1.html">Blog Details 1</a>
                                 </li><li><a className="magic-hover magic-hover__square" href="blog-details-2.html">Blog Details 2</a></li>
                             </ul>
                         </li>
-                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href="JavaScript:void(0)"><i className="icon-folder" /> Pages</a>
+                        <li className="menu-item-has-children"><a className="magic-hover magic-hover__square" href=""><i className="icon-folder" /> Pages</a>
                             <ul className="sub-menu">
                                 <li><a className="magic-hover magic-hover__square" href="services.html">Services</a>
                                 </li><li><a className="magic-hover magic-hover__square" href="services-details.html">Services Details</a></li>
@@ -141,7 +141,7 @@ export default function Index2({ data }) {
                         </li>
                         <li><a className="magic-hover magic-hover__square" href="contact.html"><i className="icon-envelope-open" /> Contact</a></li>
                     </ul>
-                    <a className="magic-hover magic-hover__square" href="JavaScript:void(0)" id="res-cross" />
+                    <a className="magic-hover magic-hover__square" href="" id="res-cross" />
                     <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
                 </div>
             </header>
@@ -154,7 +154,7 @@ export default function Index2({ data }) {
                                 <h1>Willimes Parker</h1>
                                 <p>Graphic Designer, HTML Coder, PHP Programmer
                                     and Project Manager</p>
-                                <a href="javascript:void(0)" className="lightbox-toggle magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
+                                <a href="" className="lightbox-toggle magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
                                 <span>Available for Freelance</span>
                             </div>
                         </div>
@@ -389,7 +389,7 @@ export default function Index2({ data }) {
                         <h2>Let's Create Something
                             Creative Together</h2>
                         <p>We can't wait to hear from making something beautiful and new! </p>
-                        <a href="javascript:void(0)" className="lightbox-toggle  magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s"><i className="fa-solid fa-download" />Start Consulting</a>
+                        <a href="" className="lightbox-toggle  magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s"><i className="fa-solid fa-download" />Start Consulting</a>
                     </div>
                 </div>
             </section>
