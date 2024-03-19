@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Error() {
   return (
@@ -18,10 +19,10 @@ export default function Error() {
           <div className="row align-items-center">
             <div className="col-xl-2">
               <div className="logo-icon">
-                <a className="magic-hover magic-hover__square" href="index.html">
+                <Link className="magic-hover magic-hover__square" to="/">
                   <img className="light" src="img/orix-logo.png" alt="logo" />
                   <img className="drak" src="img/black-logo.png" alt="logo" />
-                </a>
+                </Link>
                 <a
                   href="javascript:void(0)"
                   className="bar-menu magic-hover magic-hover__square"
@@ -40,44 +41,44 @@ export default function Error() {
                       </a>
                       <ul>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="index.html"
+                            to="index"
                           >
                             Home 1
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="index-2.html"
+                            to="index-2"
                           >
                             Home 2{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="index-3.html"
+                            to="index-3"
                           >
                             Home 3{" "}
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="index-4.html"
+                            to="index-4"
                           >
                             Home 4 ( Light )
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="index-4-dark.html"
+                            to="index-4-dark"
                           >
                             Home 4 ( Dark )
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
@@ -87,20 +88,20 @@ export default function Error() {
                       </a>
                       <ul>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
                             href="services.html"
                           >
                             Services
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
                             href="services-details.html"
                           >
                             Services Details
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
@@ -110,28 +111,28 @@ export default function Error() {
                       </a>
                       <ul>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="portfolio-details-1.html"
+                            to="portfolio-details-1"
                           >
                             Portfolio 1
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="portfolio-details-2.html"
+                            to="portfolio-details-2"
                           >
                             Portfolio 2
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="portfolio-details-3.html"
+                            to="portfolio-details-3"
                           >
                             Portfolio 3
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
@@ -141,28 +142,28 @@ export default function Error() {
                       </a>
                       <ul>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="our-blog.html"
+                            to="our-blog"
                           >
                             Our Blog
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="blog-details-1.html"
+                            to="blog-details-1"
                           >
                             Blog Details 1
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="blog-details-2.html"
+                            to="blog-details-2"
                           >
                             Blog Details 2
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
@@ -172,38 +173,38 @@ export default function Error() {
                       </a>
                       <ul>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="about.html"
+                            to="about"
                           >
                             About
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="pricing-plans.html"
+                            to="pricing-plans"
                           >
                             Pricing Plans
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className="magic-hover magic-hover__square"
-                            href="404.html"
+                            to="error"
                           >
                             404
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="magic-hover magic-hover__square"
-                        href="contact.html"
+                        to="contact"
                       >
                         Contact
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -218,14 +219,14 @@ export default function Error() {
                 >
                   <i className="fa-solid fa-bars" />
                 </a>
-                <a
-                  href="pdf/orix.pdf"
+                <Link
+                  to="./pdf/orix.pdf"
                   className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s"
                   target="_blank"
                 >
                   <i className="fa-solid fa-download" />
                   Download CV
-                </a>
+                </Link>
               </div>
             </div>
             <div className="menu-wrap">
@@ -347,48 +348,48 @@ export default function Error() {
               </a>
               <ul className="sub-menu">
                 <li>
-                  <a className="magic-hover magic-hover__square" href="index.html">
+                  <Link className="magic-hover magic-hover__square" to="/">
                     Home 1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="index-2.html"
+                    to="index-2"
                   >
                     Home 2
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="index-3.html"
+                    to="index-3"
                   >
                     Home 3
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="index-4.html"
+                    to="index-4"
                   >
                     Home 4 ( Light )
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="index-4-dark.html"
+                    to="index-4-dark"
                   >
                     Home 4 ( Dark )
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a className="magic-hover magic-hover__square" href="about.html">
+              <Link className="magic-hover magic-hover__square" to="about">
                 <i className="icon-user" /> About
-              </a>
+              </Link>
             </li>
             <li className="menu-item-has-children">
               <a
@@ -399,28 +400,28 @@ export default function Error() {
               </a>
               <ul className="sub-menu">
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="portfolio-details-1.html"
+                    to="portfolio-details-1"
                   >
                     Portfolio Details 1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="portfolio-details-2.html"
+                    to="portfolio-details-2"
                   >
                     Portfolio Details 2
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="portfolio-details-3.html"
+                    to="portfolio-details-3"
                   >
                     Portfolio Details 3
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -434,28 +435,28 @@ export default function Error() {
               </a>
               <ul className="sub-menu">
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="our-blog.html"
+                    to="our-blog"
                   >
                     Our Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="blog-details-1.html"
+                    to="our-blog"
                   >
                     Blog Details 1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="blog-details-2.html"
+                    to="our-blog"
                   >
                     Blog Details 2
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -468,40 +469,40 @@ export default function Error() {
               </a>
               <ul className="sub-menu">
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="services.html"
+                    to="services"
                   >
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="services-details.html"
+                    to="services-details"
                   >
                     Services Details
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="magic-hover magic-hover__square"
-                    href="pricing-plans.html"
+                    to="pricing-plans"
                   >
                     Pricing Plans
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="magic-hover magic-hover__square" href="404.html">
+                  <Link className="magic-hover magic-hover__square" to="error">
                     404
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a className="magic-hover magic-hover__square" href="contact.html">
+              <Link className="magic-hover magic-hover__square" to="contact">
                 <i className="icon-envelope-open" /> Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <a
@@ -509,14 +510,14 @@ export default function Error() {
             href="JavaScript:void(0)"
             id="res-cross"
           />
-          <a
-            href="pdf/orix.pdf"
+          <Link
+            to="pdf/orix.pdf"
             className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s"
             target="_blank"
           >
             <i className="fa-solid fa-download" />
             Download CV
-          </a>
+          </Link>
         </div>
       </header>
       <section id="particles-js" className="blog-detail pattern error-page gap">

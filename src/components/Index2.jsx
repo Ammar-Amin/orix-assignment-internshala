@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Index2() {
+export default function Index2({ data }) {
     return (
 
         <div className="menu-layer">

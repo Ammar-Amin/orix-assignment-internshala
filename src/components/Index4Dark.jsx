@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Index4Dark() {
+export default function Index4Dark({ data }) {
     return (
 
         <div className="dark-layout">
@@ -126,7 +126,7 @@ export default function Index4Dark() {
                                             <p>Years Of Experience</p>
                                         </li>
                                         <li className="time">
-                                            <h2 className="timer count-title count-number" data-to={09} data-speed={1500}>09</h2>
+                                            <h2 className="timer count-title count-number" data-to={9} data-speed={1500}>09</h2>
                                             <span>+</span>
                                             <p>Years Of Experience</p>
                                         </li>

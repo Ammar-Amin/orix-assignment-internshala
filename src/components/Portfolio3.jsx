@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Portfolio3() {
+export default function Portfolio3({ data }) {
     return (
 
         <div className="menu-layer">

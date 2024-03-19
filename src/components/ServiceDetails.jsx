@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ServiceDetails() {
+export default function ServiceDetails({ data }) {
     return (
         <div className="menu-layer">
             {/* loader start*/}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function OurBlog() {
+export default function OurBlog({ data }) {
     return (
 
         <div className="menu-layer">

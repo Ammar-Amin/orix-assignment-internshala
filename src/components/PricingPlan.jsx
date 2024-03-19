@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PricingPlan() {
+export default function PricingPlan({ data }) {
     return (
 
         <div className="menu-layer">
