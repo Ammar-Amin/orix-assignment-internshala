@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Footer({ data }) {
-    console.log(data.about)
     return (
         <footer className="gap" style={{ backgroundImage: 'url(./img/footer.png)' }}>
             <div className="container">

@@ -66,7 +66,7 @@ export default function Index4Dark({ data }) {
                             <div className="col-lg-4">
                                 <div className="user-info">
                                     <img alt="profile" src="https://via.placeholder.com/247x296" />
-                                    <h3>Willimes Parker</h3>
+                                    <h3>{data.about.name}</h3>
                                     <p>Graphic Designer, HTML Coder,
                                         and Project Manager</p>
                                     <a href="pdf/orix.pdf" className="magic-hover magic-hover__square button download  button--moema button--text-thick button--text-upper button--size-s" target="_blank"><i className="fa-solid fa-download" />Download CV</a>
@@ -88,7 +88,7 @@ export default function Index4Dark({ data }) {
                                 <div className="col-xl-8 col-lg-12">
                                     <div className="user-data" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
                                         <h2>Hello I Am</h2>
-                                        <h1>Willimes Parker</h1>
+                                        <h1>{data.about.name}</h1>
                                         <p>Graphic Designer, HTML Coder, PHP Programmer
                                             and Project Manager</p>
                                         <a href="" className="lightbox-toggle button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>

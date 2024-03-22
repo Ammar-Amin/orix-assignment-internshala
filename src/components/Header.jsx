@@ -33,7 +33,7 @@ export default function Header({ data }) {
                                             <li>
                                                 <Link
                                                     className="magic-hover magic-hover__square"
-                                                    to="index"
+                                                    to=""
                                                 >
                                                     Home 1
                                                 </Link>
@@ -80,7 +80,7 @@ export default function Header({ data }) {
                                             <li>
                                                 <Link
                                                     className="magic-hover magic-hover__square"
-                                                    href="services.html"
+                                                    to="services"
                                                 >
                                                     Services
                                                 </Link>
@@ -88,7 +88,7 @@ export default function Header({ data }) {
                                             <li>
                                                 <Link
                                                     className="magic-hover magic-hover__square"
-                                                    href="services-details.html"
+                                                    to='services-details'
                                                 >
                                                     Services Details
                                                 </Link>
@@ -338,7 +338,7 @@ export default function Header({ data }) {
                         </a>
                         <ul className="sub-menu">
                             <li>
-                                <Link className="magic-hover magic-hover__square" to="/">
+                                <Link className="magic-hover magic-hover__square" to="">
                                     Home 1
                                 </Link>
                             </li>

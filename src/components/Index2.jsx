@@ -151,7 +151,7 @@ export default function Index2({ data }) {
                         <div className="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
                             <div className="user-data two">
                                 <h2>Hello I Am</h2>
-                                <h1>Willimes Parker</h1>
+                                <h1>{data.about.name}</h1>
                                 <p>Graphic Designer, HTML Coder, PHP Programmer
                                     and Project Manager</p>
                                 <a href="" className="lightbox-toggle magic-hover magic-hover__square button button--moema button--text-thick button--text-upper button--size-s">Start Consulting</a>
